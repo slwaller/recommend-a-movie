@@ -19,6 +19,11 @@ class Movies extends Component {
     return (
       <div>
           <h2>Movies</h2>
+          <ul>
+            {this.state.movies.map(movie => 
+              <li key={movie.id}>{movie.name} - {movie.genre}</li>
+            )}
+          </ul>
       </div>
     )
   }
